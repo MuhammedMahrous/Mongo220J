@@ -43,7 +43,7 @@ public class UserController extends ApiController {
 
     Map<String, String> results = new HashMap<>();
 
-    User user = userService.authenticate(login.getEmail(), login.getPassword(), results);
+      User user = userService.authenticate(login.getEmail(), login.getPassword(), results);
     if (user == null) {
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(results);
     }
